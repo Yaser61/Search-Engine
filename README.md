@@ -11,9 +11,9 @@ views.py: Views for handling request and response logic.
 templates/: HTML templates for the project.
 static/: Static files (CSS, JS, images).
 
-Start the development server:
+"django-admin startproject mysite": This will create a mysite directory in your current directory. 
 
-"python manage.py runserver"
+Start the development server: "python manage.py runserver"
 
 Usage
 Open your web browser and go to http://127.0.0.1:8000/.
