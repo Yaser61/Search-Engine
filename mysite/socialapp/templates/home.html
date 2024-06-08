@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Search Results for "{{ request.GET.q }}"</h1>
+    <form method="get" action="{% url 'home' %}">
+        <input type="text" name="q" placeholder="Search..." value="{{ request.GET.q }}">
+        <button type="submit">Search</button>
+    </form>
+    <ul>
+        {% for result in results.organic %}
+            <li>
+                <a href="{{ result.link }}">{{ result.title }}</a>
+                <p>{{ result.snippet }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
